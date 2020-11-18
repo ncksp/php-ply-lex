@@ -1,5 +1,5 @@
-from FilteredLexer import FilteredLexer
-import phplex as lex
+from core.FilteredLexer import FilteredLexer
+import core.phplex as lex
 
 lexer = None
 
