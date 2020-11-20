@@ -1,15 +1,14 @@
-from core.FilteredLexer import FilteredLexer
 import core.phplex as lex
 
 lexer = None
 
 def run(code):
-    lexer = FilteredLexer(lex.get_lexer())
+    lexer = lex.get_lexer()
 
     lexer.input(code)
     
     while True:
-        tok = lexer.token(lex.unparsed)
+        tok = lexer.token()
         if not tok:
             break
         print(tok)
